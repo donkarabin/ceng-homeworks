@@ -1,0 +1,55 @@
+		     ---Wireshark Assignment 2---
+							Yusif Aliyev
+							1949940
+
+Answers : 
+
+I) From the experiment , I tracked the packets and examined that equally 
+splitted(~1350b) packets arriving to my IP address with UDP protocol used. 
+However after some research on the internet, it said that Youtube is 
+using Real Time Streaming Protocol (RTSP) because, video player is flash
+player, and it is a flash object and play button acts as invoker for RTSP,
+and content streamed with UDP packets.
+
+II) My IP address: 192.168.1.6
+    Youtube's IP address: 172.217.169.132
+    ceng.metu.edu.tr IP address: 144.122.145.146
+
+III) Table: These are the destination and source port numbers of the first 6 
+GET requests, I entered the site couple of times, so checked the other GET source
+port is incrementing by 2 in the others. 
+
+|-------------------------------------|
+|No: |Source port: | Destination port:|
+|----|-------------|------------------|
+| 1) | 37648       |  80              |
+|----|-------------|------------------|
+| 2) | 37650       |  80              |
+|----|-------------|------------------|
+| 3) | 37652       |  80              |
+|----|-------------|------------------|
+| 4) | 37654       |  80              |
+|----|-------------|------------------|
+| 5) | 37656       |  80              |
+|----|-------------|------------------|
+| 6) | 37658       |  80              |
+|-------------------------------------|
+
+
+IV) No of packets: 6029 - Sequence no: 0 - Ack no: undefined (because this is first tcp request) 
+		 : 6030 - Sequence no: 0 - Ack no: 1
+		 : 6031 - Sequence no: 1 - Ack no: 1
+
+
+V) Numbers :        Segment Length:
+    6235     ----   674
+    6628     ----   180
+    6701     ----   662
+    6723     ----   862
+    6765     ----   1097
+
+
+
+VI) From first TCP connection we can see the available buffer space is: 28960. If we trace the packets,
+we can see that the sender is not throttled.(max available buffer size is not exceeded.)
+

@@ -1,0 +1,50 @@
+		---Wireshark Assignment 2---
+							Yusif Aliyev
+							1949940
+
+
+I) 12 ICMP echo requests sent by traceroute. TTL fields
+of these requests started by ttl=1 and incremented one-by-
+one for each request up to ttl=12 for the last(12th) request.
+However TTL fields of responses exceeded, values was around 250,
+but the last response was not exceeded value is ttl=55.
+
+
+II) NO of TTL-              Source IP addresses:
+    exceeded responses:           
+    1) ------------  11. ---- 144.122.24.1
+    2) ------------  13. ---- 144.122.2.1
+    3) ------------  15. ---- 144.122.1.21
+    4) ------------  17.---- 193.140.85.137
+    5) ------------  19.---- 213.194.75.25
+    6) ------------  21.---- 31.145.74.162
+    7) ------------  23.---- 46.234.28.57
+    8) ------------  25.---- 195.2.23.129
+    9) ------------  27.---- 195.2.27.149
+    10)------------  29.---- 195.2.16.1
+    11)------------  31.---- 23.235.41.162
+
+   Comparison: The output of traceroute command shows 12
+output with source IP addresses of the responses and time in
+ms. Hovewer first 11 of these outputs are TTL-exceeded respon-
+ses , the 12th output is the not exceeded response. But info 
+about TTL-exceeded responses is not specified in the output,
+on the other hand, wireshark shows us this info that which res-
+ponse is TTL-exceeded or not.
+
+
+III) Traceroute sends packets using ICMP. First packets ttl value
+starts with 1. There are some routers between our IP address and the
+address of where we want to reach. When encontering with the router, router is decreasing ttl=1 to ttl=0 , then it sends ttl exceeded response to our device with the header that contains its source IP add-ress. Then traceroute sends next packet with ttl=2 to the router that it already has the IP address. Then the first router decreases ttl=2 to ttl=1 and forwards to the next hop (router). Second router also decreases ttl=1 to ttl=0 and TTL-exceeded response will go to our device, again 
+with the header containing source IP address of that router. Same procedure continues until it reaches the destination website or address. 
+     The knowledge from my several experiments to find route to same address, from same network/location is that the route is not changed.
+Hovewer the route can be changed if destination hop(router) has two or
+more connection to different ISPs and when load balancing occured.
+
+IV) IP Header length is 20 bytes, total length is 85.
+
+V) Protocol field value is 17 for UDP, for ICMP value is 1.
+
+VI) Yes , fragmented. 4 fragments used , first 3 fragment is of
+1480 bytes (whole package 1514 bytes), the last one is ~588 bytes,
+because 5000 bytes was the size of ping request.
