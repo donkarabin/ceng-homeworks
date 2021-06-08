@@ -1,0 +1,6 @@
+Files:
+	the3.cpp
+	the3.h
+	tester.zip
+Usage:
+	Detailed usage is in the README.md file in tester.zip with Makefile
