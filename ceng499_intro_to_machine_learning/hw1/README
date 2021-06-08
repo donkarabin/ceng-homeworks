@@ -1,0 +1,19 @@
+Files:
+	dataset.py
+	model.py
+	train.py
+
+Data:
+	This is a pytorch project.Data folder should be in the same directory with the above files. 
+
+Usage:
+	dataset.py:
+		python3 dataset.py
+		Forms dataset by reading images and labels from ./data directory making tensor transformations.
+
+	model.py:
+		python3 model.py
+		Creates model and returns prediction.
+	train.py:
+		python3 train.py
+		Loads data from dataset.py and evaluates the best prediction based on the model.
