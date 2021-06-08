@@ -1,0 +1,23 @@
+Files:
+	knn.py
+	kmeans.py
+	hac.py
+	knn_mini_tester.py
+	kmeans_mini_tester.py
+	hac_mini_tester.py
+
+Data:
+	hw2_data must be in the same directory with the files above, because of the data paths are fixed.
+
+Usage:
+	knn.py:
+		python3 knn_mini_tester.py
+		Main function resides in knn_mini_tester.py file. It reads data from ./hw2_Data/knn directory, plots the k values vs accuracy 			graph and prints maximum validation accuracy, best k_KNN value and the best test accuracy.
+
+	k_means.py:
+		python3 kmeans_mini_tester.py
+		Main function resides in kmeans_mini_tester.py file.It reads data from ./hw2_data/kmeans directory, plots k vs objective 			function values with elbow method graph for each clustering data and plots each resulting clusters.
+
+	hac.py:
+		Not implemented.
+	
